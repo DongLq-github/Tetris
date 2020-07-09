@@ -1,0 +1,1 @@
+java -jar D:\project\Tetris\classes\artifacts\Tetris_jar\Tetris.jar

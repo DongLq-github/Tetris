@@ -17,7 +17,7 @@ public class PieceCreatorImpl {
 	//从map中得到图片对象，如果map中没有存在图片对象, 则创建
 	private Image getImage(int key) {
 		if (this.images.get(key) == null) {
-			Image s = ImageUtil.getImage("res/square" + key + ".jpg");
+			Image s = ImageUtil.getImage("/res/square" + key + ".jpg");
 			this.images.put(key, s);
 		}
 		return this.images.get(key);

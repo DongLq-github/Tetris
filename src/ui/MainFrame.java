@@ -52,7 +52,7 @@ public class MainFrame extends JFrame {
 	Timer timer = new Timer();
 	boolean pauseFlag = false,gameover = false,gamestart = false;
 	Square[][] squares;
-	Image huaji = ImageUtil.getImage("res/huaji.png");
+	Image huaji = ImageUtil.getImage("/res/huaji.png");
 	
 	public MainFrame() {
 		
@@ -187,7 +187,8 @@ public class MainFrame extends JFrame {
 	
 	//…Ë÷√Õº∆¨±≥æ∞
 	public void setPicBack(){
-        String path = "res/2.jpg";  
+        String path = this.getClass().getResource("/res/2.jpg").getPath();
+		System.out.println("±≥æ∞Õº∆¨¬∑æ∂£∫"+path);
         // ±≥æ∞Õº∆¨  
         ImageIcon background = new ImageIcon(path);  
         // ∞—±≥æ∞Õº∆¨œ‘ æ‘⁄“ª∏ˆ±Í«©¿Ô√Ê  
@@ -207,6 +208,7 @@ public class MainFrame extends JFrame {
 	public void init(){
 		//gamePanel
 		gamePanel.setBounds(0, 0, 600, 840);
+		gamePanel.setBackground(Color.BLACK);
 		
 		//toolPanel
 		toolPanel.setBounds(600, 0, 300, 600);

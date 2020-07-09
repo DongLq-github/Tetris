@@ -3,10 +3,8 @@ package util;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 
@@ -31,13 +29,15 @@ public class ImageUtil {
 	
 	//创建输入流读取图片
 	public static BufferedImage getImage(String imageURL){
-		File file = new File(imageURL);
-		FileInputStream is = null;
-		try {
-		     is = new FileInputStream(file);
-		} catch (FileNotFoundException e2) {
-		     e2.printStackTrace();
-		}
+//		File file = new File(imageURL);
+//		FileInputStream is = null;
+//		try {
+//		     is = new FileInputStream(file);
+//		} catch (FileNotFoundException e2) {
+//		     e2.printStackTrace();
+//		}
+		URL is = ImageUtil.class.getResource(imageURL);
+		System.out.println(is.getFile());
 		BufferedImage sourceImg = null;
 		try {
 		     sourceImg = javax.imageio.ImageIO.read(is);

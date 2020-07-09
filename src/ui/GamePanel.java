@@ -10,7 +10,7 @@ import util.ImageUtil;
 public class GamePanel extends JPanel {
 	
 //	Image background = ImageUtil.getImage("res/background.jpg");
-	Image gameover = ImageUtil.getImage("res/gameover.jpg");
+	Image gameover = ImageUtil.getImage("/res/gameover.jpg");
 //	Image dongtu = ImageUtil.getImage("res/dongtai.gif");
 //	ImageIcon dongtu = new ImageIcon("res/dongtai.gif");
 	
